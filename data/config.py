@@ -9,6 +9,10 @@ for adm in tg_data["admins"].split():
     admins.append(adm)
 
 # Bot token
-BOT_TOKEN = "5309451196:AAEtX8W746QtbDwE-t34BUIy1eKyFsQAy-o"
+BOT_TOKEN = tg_data["token"]
 # admins
 ADMINS = admins 
+
+async def IS_ADMIN(id: str):
+   return id in ADMINS
+
