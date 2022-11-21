@@ -1,8 +1,9 @@
 from keyboards.inline.review_menu.review_menu import create_review_menu_keyboard
 from ..vars_for_handlers.vars import set_message_id_to_delete
 from states.states import StatesGroup
-from loader import bot
 from aiogram import types
+from loader import bot
+
 
 reviews_menu_text = """
 Наши отзывы можно посмотреть
