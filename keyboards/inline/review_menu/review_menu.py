@@ -12,7 +12,7 @@ async def create_TwoGis_button():
     return Twogis_button   
 
 async def create_leaveReview_button():
-    leaveReview_button = InlineKeyboardButton(text="Оставить отзыв", callback_data=review_menu_button_callbacks[2])
+    leaveReview_button = InlineKeyboardButton(text="Оставить отзыв", callback_data=review_menu_button_callbacks[0])
     return leaveReview_button
 
 async def combine_review_menu_keyboard():
