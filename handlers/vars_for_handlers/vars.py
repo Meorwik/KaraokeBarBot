@@ -25,4 +25,3 @@ async def get_needed_menu():
         return await get_barMenu()
     elif request == "kitchen":
         return await get_kitchenMenu()
-    

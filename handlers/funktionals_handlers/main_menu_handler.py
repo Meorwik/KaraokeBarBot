@@ -13,8 +13,7 @@ async def respond_on_main_menu_buttons(call: types.CallbackQuery, state: FSMCont
     await state.finish()
     await bot.delete_message(message_id=await get_message_id_to_delete(), chat_id=call.from_user.id)
     if call.data == "Book_":
-        
-        await StatesGroup.stateInBookingMenu.set()
+        # await StatesGroup.stateInBookingMenu.set()
         await call.answer("В процессе разработки")
         
     elif call.data == "BarOrKitchen_":

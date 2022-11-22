@@ -10,15 +10,7 @@ from aiogram import types
 async def respond_on_rewievs_menu_buttons(call: types.CallbackQuery, state: FSMContext):
     await state.finish()
     await bot.delete_message(message_id=await get_message_id_to_delete(), chat_id=call.from_user.id)
-    if call.data == "instsgram_":
-        pass
     
-    elif call.data == "2gis_":
-        pass
-    
-    elif call.data == "leave_review_":
-        pass
-    
-    elif call.data == "back_":
+    if call.data == "back_":
         await main_menu_start(call=call)
     

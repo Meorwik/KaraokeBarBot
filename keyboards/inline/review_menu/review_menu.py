@@ -1,14 +1,14 @@
 from aiogram.types import InlineKeyboardButton
 from ..settings_for_all_keyboards import init_keyboard, create_back_button
 
-review_menu_button_callbacks = ["instsgram_", "2gis_", "leave_review_", "back_"]
+review_menu_button_callbacks = ["back_"]
 
 async def create_instagram_button():
-    instagram_button = InlineKeyboardButton(text="Перейти в Instagram", callback_data=review_menu_button_callbacks[0])
+    instagram_button = InlineKeyboardButton(text="Перейти в Instagram", url="https://www.instagram.com/karaokelubimoe/")
     return instagram_button
     
 async def create_TwoGis_button():
-    Twogis_button = InlineKeyboardButton(text="Перейти в 2Gis", callback_data=review_menu_button_callbacks[1])
+    Twogis_button = InlineKeyboardButton(text="Перейти в 2Gis", url="https://2gis.kz/almaty/branches/70000001019252897")
     return Twogis_button   
 
 async def create_leaveReview_button():

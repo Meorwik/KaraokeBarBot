@@ -13,6 +13,7 @@ BarAndKitchen_selected_menu_text = """На всё меню скидки посл
 async def send_BarAndKitchen_info_message(chat_id: int):
     message_to_delete_after_reading = await bot.send_message(chat_id=chat_id,text=BarAndKitchen_menu_text, reply_markup=await create_BarAndKitchen_menu_keyboard())
     await set_message_id_to_delete(message_id=message_to_delete_after_reading.message_id)
+    print(message_to_delete_after_reading.message_id)
     await StatesGroup.stateInBarAndKitchengMenu.set()
     
 async def send_sale_info_message(chat_id: int, photo):
