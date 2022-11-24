@@ -1,2 +1,2 @@
-from . import BarAndKitchenUrlLinks
-from . import ReviewsUrlLinks
+from . import urls
+from . import urls
