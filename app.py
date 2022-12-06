@@ -1,8 +1,7 @@
 from aiogram import executor
 from loader import dp
-import handlers
 from admin_panel.notify_admins import on_startup_notify
-from admin_panel.set_bot_commands import set_default_commands
+from utils.set_bot_commands import set_default_commands
 
 
 async def on_startup(dispatcher):

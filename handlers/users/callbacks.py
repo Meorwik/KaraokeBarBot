@@ -17,7 +17,8 @@ async def respond_on_callbacks(call: types.CallbackQuery):
         await call.message.answer("IN PROGRESS")
 
     if call.data == "KitchenAndBar_":
-        await call.message.answer(text=texts.get("bar_and_kitchen_1"), reply_markup=create_kitchen_and_bar_menu_keyboard())
+        await call.message.answer(text=texts.get("bar_and_kitchen_1"),
+                                  reply_markup=create_kitchen_and_bar_menu_keyboard())
 
     if call.data == "Reviews_":
         await call.message.answer(text=texts.get("reviews"), reply_markup=create_reviews_menu_keyboard())
@@ -30,17 +31,20 @@ async def respond_on_callbacks(call: types.CallbackQuery):
         await main_menu_start(call)
 
     if call.data == "back_to_bar_and_kitchen":
-        await call.message.answer(text=texts.get("bar_and_kitchen_1"), reply_markup=create_kitchen_and_bar_menu_keyboard())
+        await call.message.answer(text=texts.get("bar_and_kitchen_1"),
+                                  reply_markup=create_kitchen_and_bar_menu_keyboard())
 
     # -------------------------------------KITCHEN AND BAR MENU-----------------------
     if call.data == "bar_":
         bar_file = open("data/lubimoe_pics/BarMenu.png", "rb")
-        await call.message.answer_photo(photo=bar_file,caption=texts.get("bar_and_kitchen_2"),
-                                  reply_markup=create_eating_menu_keyboard(url=await get_bar_menu()))
+        await call.message.answer_photo(photo=bar_file,
+                                        caption=texts.get("bar_and_kitchen_2"),
+                                        reply_markup=create_eating_menu_keyboard(url=await get_bar_menu()))
         bar_file.close()
 
     if call.data == "kitchen_":
         kitchen_file = open("data/lubimoe_pics/KitchenMenu.png", "rb")
-        await call.message.answer_photo(photo=kitchen_file, caption=texts.get("bar_and_kitchen_2"),
-                                  reply_markup=create_eating_menu_keyboard(url=await get_kitchen_menu()))
+        await call.message.answer_photo(photo=kitchen_file,
+                                        caption=texts.get("bar_and_kitchen_2"),
+                                        reply_markup=create_eating_menu_keyboard(url=await get_kitchen_menu()))
         kitchen_file.close()
